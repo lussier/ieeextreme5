@@ -42,6 +42,7 @@ Series of values X and Y seperated by space.
 \subsection{Output}
 The program should output the value of $ \rho_{x,y} $ to four decimal places. If $ \rho_{x,y} $ cannot be computed, then the output should be the string 'invalid input'. 
 Note: The input ends with a delimiter. There is no new line character at the end of the result.
+
 \subsection{Sample Input}
 14 2\\
 16 5\\
@@ -51,6 +52,7 @@ Note: The input ends with a delimiter. There is no new line character at the end
 50 13\\
 83 20\\
 -\\
+
 \subsection{Sample Output}
 The following is the output for the above sample input.\\
 0.9856
@@ -85,16 +87,17 @@ For the above sample input the output should be:\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Question C:\\Longest Cable Way}
+
+\subsection{Description}
 Historically, all cableways have been less than 100 kilometers in length and cable car speeds have not crossed 50 kmph. However, the discovery a new ore material, available directly in the form of long rods, in the Grand Canyon, led to the ability to create very high speed cable ways that can extend to thousands of kilometers. The US army decided to connect most of their air bases and navy bases using long-distance cable ways. However, there were a few constraints.
 
 \begin{enumerate}
+
 \item The cables were in the form of long and flexible rods with smooth edges that can be joined together using a very expensive but specialized grafting process. However, cutting the cables was not possible as it was not possible to retain the smoothness of the edges that is required to graft them.
-
 \item The join process was not only very expensive but also inefficient as the speeds of the cable cars were affected by the joints and reduced by nearly 5\% for every joint. Hence, there was a need to minimize the number of joints.
-
 \item The cables, being naturally available rods of varying lengths, were available in specific sizes and there was limited inventory that was available.
-
 \item The cable way should be connected using cable that is the exact length of the distance between the two locations (no higher and no lesser).
+
 \end{enumerate}
 
 \subsection{Task}
@@ -111,10 +114,12 @@ Each subsequent line contains a pair of numbers Li Ni, indicating the length of 
 The input is terminated by 0 0.
 
 \subsection{Output}
-\begin{enumerate}
-\item The output should contain a single integer J representing the minimum number of joints possible to build the requested length of the cable way
 
+\begin{enumerate}
+
+\item The output should contain a single integer J representing the minimum number of joints possible to build the requested length of the cable way
 \item If no solution is possible the program should print “No solution possible” in the output.
+
 \end{enumerate}
 
 \subsection{Note}
@@ -145,6 +150,7 @@ $3 * 2 + 30 * 1 + 50 * 8 + 8 * 1 = 12$ rods of cables i.e., 11 Joints
 45 12\\
 8 12\\
 0 0
+
 \subsection{Sample Output - Scenario 1}
 10
 
@@ -156,6 +162,7 @@ $3 * 2 + 30 * 1 + 50 * 8 + 8 * 1 = 12$ rods of cables i.e., 11 Joints
 90 21\\
 43 1\\
 0 0
+
 \subsection{Sample Output - Scenario 2}
 No solution possible
 
@@ -249,8 +256,8 @@ No student at this location
 
 \section{Question E:\\Kakuro Validation}
 
+\subsection{Description}
 Kakuro is a number puzzle also known as “cross-sum”. The Kakuro puzzle is a n * n board which has 3 types of cells:
-
 
 \begin{enumerate}
 \item White Cells or Blank Cells in which the solver can put in any number between 1 and 9.
@@ -404,7 +411,10 @@ On the second row, no 3 different digits can add to up to 5. Hence, no solution 
 No Unique Solution
 
 \subsection{Explanation - Scenario 3}
-There are multiple solutions possible. Two Examples are shown below:
+There are multiple solutions possible. 
+
+Two Examples are shown below:\\
+
 \includegraphics{src/qe9.png} \includegraphics{src/qe10.png}
 
 \subsection{Sample Input - Scenario 4}
@@ -584,21 +594,25 @@ they cross each other on their way.
 \subsection{Task}
 Please write a program that gets the moves of the Bugs and the moves of all the
 Elmers and decides when he is caught or whether Bugs has escaped.
+
 \subsection{Input}
 The first line contains the number of problems. Each one of the other lines contains
 three numbers: the first is N = number of Elmers; the second is M = number of
 moves; and the third is P0 = Bugs's initial location. These numbers are followed by M
 groups of N+1 letters each which define the moves of Bugs (the first letter) and each
 one of the Elmers (the next N letters).
+
 \subsection{Output}
 The move number after which Bugs is caught, and the index of the Elmer who caught
 it (if several has, give the minimal one), or 0 0 if he survives the search.
 
 Note: There is no new line character at the end of the result.
+
 \subsection{Sample Input}
 2\\
 4 2 3 LLLRR SLRLR\\
 2 6 8 LLR ULS SRS USR USU SUU
+
 \subsection{Sample Output}
 2 3\\
 0 0
@@ -645,11 +659,12 @@ Vangelis has at his disposal a map of the swamp. This map is a square grid with 
 
 \subsection{Task}
 Your task is to determine how many white squares need to be converted to black squares so that there will be only one island in the diagram with the least amount of conversions. Most test cases will have more than one solution.
+
 \subsection{Input}
 Your program should read the standard input. The first line of the input contains the integer N. Each of the following N lines contains N numbers on each line. The numbers on each line are either a 0 or a 1, separated by a single space. A 1 represents a black square, and a 0 represents a white square.
+
 \subsection{Output}
 Your program should write on the standard output a number M, the number of white squares to be converted to black.Note: There is no new line character at the end of the result.
-
 
 \subsection{Input 1}
 10\\
@@ -663,6 +678,7 @@ Your program should write on the standard output a number M, the number of white
 0 0 0 0 0 0 0 0 0 0\\
 0 0 0 0 1 0 0 0 0 0\\
 0 0 0 0 0 0 0 0 0 0
+
 \subsection{Output 1}
 11\\
  
@@ -670,6 +686,7 @@ Your program should write on the standard output a number M, the number of white
 2\\
 1 0\\
 0 1\\
+
 \subsection{Output 2}
 1\\
  
@@ -679,6 +696,7 @@ Your program should write on the standard output a number M, the number of white
 0 0 0 0\\
 0 0 0 0\\
 0 0 0 1\\
+
 \subsection{Output 3}
 5
 
@@ -715,8 +733,10 @@ Note: There is no new line character at the end of the result.
 2\\
 1\\
 2
+
 \subsection{Output}
 11
+
 \subsection{Explanation}
 (Pattern) - Occurrences\\
 (1 2) - 3\\
@@ -753,6 +773,7 @@ Note: There is no new line character at the end of the result.
 0.5\\
 1\\
 \$
+
 \subsection{(Isosceles triangle) Expected output}
 1.00\\
 
@@ -763,6 +784,7 @@ Note: There is no new line character at the end of the result.
 
 \subsection{Description}
 It’s almost the end of the year; Dumbledore wants to give out the Hogwarts House cup to the group that has the most points. However recent events need to be considered and he has some last minute points to be awarded. Dumbledore could wave his wand to find the winner, but a critical bug in the wand's code made it to stop working. You need to help him, calculate the revised scores of each of the group and announce the highest score. Dumbledore is counting on you.
+
 \subsection{Input Format}
 First line is the number of Test Cases, N.
 
@@ -798,6 +820,7 @@ G 5 10\\
 
 \subsection{Description}
 Maya wants to switch to a healthy diet. An optimal diet consists of C gm of carbohydrates, F gm of fat, P gm of protein. Any other element in the food (represented by O) is considered unwanted. She procured a table containing the carbohydrates, fat, protein and other contents (all in gms per serving) of some healthy foods. Her goal is to consume at least C, F and P gms of carbohydrates, fat and protein respectively yet minimize the overall in-take (in gms) of food. You need to help her choose the ideal combination from the table.
+
 \subsection{Inputs}
 The program must read input from standard-input. The input format is as follows. The first line contains the optimal carbohydrate, fat and protein consumption (in gm), separated by spaces. The second line contains k – the number of food items. Each of the following k lines contains - name, carbohydrate, fat, protein and other contents of a food item, separated by spaces. The weight of a serving of a particular food item is the sum of C, P, F, O values on the corresponding line.
 The name of food items are non-space ASCII strings. The maximum value for K is 10. The maximum weight of a serving is 1000 gms. Each of the c, p, f, o values are whole numbers (integers >= 0).
@@ -811,6 +834,7 @@ N3\\
 .\\
 .\\
 Nk
+
 \subsection{Output}
 Output is printed onto the standard-output.
 The output must contain k lines, each line containing the name of a food item followed by the number
@@ -818,24 +842,27 @@ of servings Maya should consume, separated by space and in the same sequence. If
 output must be just one word - "Null".
 
 Note: There is no new line character at the end of the result.
-Examples:
-\subsection{Input 1}
+
+\subsection{Example Input 1}
 3 5 4\\
 3\\
 A 1 0 0 2\\
 B 0 1 0 3\\
 C 0 0 1 2
-\subsection{Output 1}
+
+\subsection{Example Output 1}
 A 3\\
 B 5\\
 C 4
-\subsection{Input 2}
+
+\subsection{Example Input 2}
 15 25 20\\
 3\\
 Banana 4 1 3 2\\
 Orange 1 2 1 3\\
 Apple 1 2 1 4
-\subsection{Output 2}
+
+\subsection{Example Output 2}
 Banana 3\\
 Orange 11\\
 Apple 0
@@ -849,14 +876,12 @@ Apple 0
 You are part of your national security team who is trying to breakdown on the plans of a terrorist group. Everybody has high hopes on you to obtain the magic key that will open all the enemy secrets, your other team mates have been successful in tricking the enemy to dip his hands in invisible radium ink after which he typed the secret key to unlock his precious computer. The intelligence has also found that the key is might be one among the standard words of a secret dictionary(which they have managed to sniff out from the enemies). Your counterparts have done their job, now its upto you. Being a terrific programmer, the team expects you to give them a list of probable keys which they can use to unlock the computer. So, you have the list of characters which is part of the key and the dictionary, return the list of keys as soon as possible. If you don't find any possible keys then there is a mole in your team!
 
 \subsection{Input}
-
 First line will have a number n, the number of words in dictionary. $1<=n<=2*10^5$.
 Followed by exactly 'n' words(separated by whitespace, each word at max having 100 charcters - only small case).
 Next line will have number of testcases, t. $1<=t<=10^3$.
 't' lines follow each with a set of characters(without any spaces, max length of 26 - only small case) which forms the key.
 
 \subsection{Output}
-
 For each test case, print a line with list of all the words, separated by space, which might be probable keys in sorted order. If there is no key matching then print "NONE" (quotes are only for clarity).
 
 \subsection{Example Input}
@@ -865,7 +890,9 @@ bill ilp lip pile pill tout out lipp cool dude\\
 2\\
 ilp\\
 blyah
+
 \subsection{Example Output}
 ilp lip lipp pill\\
 NONE
+
 \end{document}
