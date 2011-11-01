@@ -1,0 +1,46 @@
+% QUESTION X
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Question X:\\Hacker's Challenge}
+
+\subsection{Description}
+You are part of your national security team who is trying to 
+breakdown on the plans of a terrorist group. Everybody has 
+high hopes on you to obtain the magic key that will open all 
+the enemy secrets, your other team mates have been successful 
+in tricking the enemy to dip his hands in invisible radium 
+ink after which he typed the secret key to unlock his precious 
+computer. The intelligence has also found that the key is might 
+be one among the standard words of a secret dictionary(which they 
+have managed to sniff out from the enemies). Your counterparts have 
+done their job, now its upto you. Being a terrific programmer, the 
+team expects you to give them a list of probable keys which they can 
+use to unlock the computer. So, you have the list of characters which 
+is part of the key and the dictionary, return the list of keys as
+soon as possible. If you don't find any possible keys then there 
+is a mole in your team!
+
+\subsection{Input}
+First line will have a number n, the number of words in dictionary. 
+$1<=n<=2*10^5$.
+Followed by exactly 'n' words(separated by whitespace, each word 
+at max having 100 charcters - only small case).
+Next line will have number of testcases, t. $1<=t<=10^3$.
+'t' lines follow each with a set of characters(without any spaces, 
+max length of 26 - only small case) which forms the key.
+
+\subsection{Output}
+For each test case, print a line with list of all the words, 
+separated by space, which might be probable keys in sorted order. 
+If there is no key matching then print "NONE" (quotes are only for clarity).
+
+\subsection{Example Input}
+10\\
+bill ilp lip pile pill tout out lipp cool dude\\
+2\\
+ilp\\
+blyah
+
+\subsection{Example Output}
+ilp lip lipp pill\\
+NONE

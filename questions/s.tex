@@ -1,0 +1,40 @@
+% QUESTION S
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Question S:\\Simple polygons}
+
+\subsection{Description}
+Cyclic convex polygons are a simple kind of polygons: all N 
+corners lie on a circle and the boundaries do not intersect. 
+The surface of such a polygon is area is shown hatched in 
+the example sketched below (N=5).
+
+\includegraphics[width=10cm]{src/qs0.png}
+
+The corner positions (xi, yi) can be expressed in terms of 
+the angle as shown in the example.
+
+\subsection{Task}
+Write a program that reads a set of corner point angles 
+from stdin. The radius of the cyclic polygon is 1 (unit circle)
+ and the angles are given as multiples of $\pi$ 
+ (thus in the range 0..2). Your program calculates the surface area 
+ of the specified polygon (N<=200) and outputs it to stdout.
+
+\subsection{Input/Output format}
+Each line of the input file contains a corner point angle. The 
+output is expected to have the following c-style format: \%.2f.
+
+Keep reading Input until you hit dollar sign \$
+
+Note: There is no new line character at the end of the result.
+
+\subsection{(Isosceles triangle) Input:}
+0\\
+0.5\\
+1\\
+\$
+
+\subsection{(Isosceles triangle) Expected output}
+1.00\\
+

@@ -1,0 +1,33 @@
+% QUESTION J
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Question J:\\Resistors Network}
+
+\subsection{Task}
+Can you help the puzzle-master check the solutions he receives by writing 
+a program which, given a resistor network computes the overall resistance 
+between "a" and "z"?
+
+Note: we only ask you to solve networks which are parallel – series; as a hint see the clip at http://www.youtube.com/watch?v=q-DxWK5Wzzc
+
+\subsection{Input}
+The first line contains the number of problems. Each one of the other 
+lines contains pairs of letters to mark the endpoint of a 1-Ohm resistor.
+
+\subsection{Output}
+The overall resistance, given in 4-digits accuracy.
+
+\subsection{Sample Input}
+4\\
+ab bc cd dz\\
+az az az\\
+ab bc cz ad de ef fz\\
+ab bc cd de ef fg gz az bg cf\\
+Note: New line is needed at the end of the last line
+
+\subsection{Sample Output}
+4.0000\\
+0.3333\\
+1.7143\\
+0.7321
+

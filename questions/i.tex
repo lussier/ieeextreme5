@@ -1,0 +1,51 @@
+% QUESTION I
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Question I:\\Help Bugs Bunny escape Elmer}
+
+\subsection{Description}
+A group of Elmer Fudds are chasing Bugs Bunny in a binary tree. In every turn, Bugs
+moves and then all the Elmers are moving. Each move is along an edge of the tree. If
+any of the Elmers is on the same node as Bugs, before or after Bugs’ move, they win.
+The tree's height is H and nodes are numbered from 1 to $ 2^{H-1} $
+
+For example, see tree of height 3.
+
+\includegraphics[width=5cm]{src/qI0.png}
+
+Each move is one of the following four letters\\
+
+U – moving up the tree (for example, from 7 to 3 in the example above)\\
+L – moving to the left child (for example, from 1 to 2 in the example above)\\
+R – moving to the right child (for example, from 2 to 5 in the example above)\\
+S – stay in the same place (for example, from 4 to 4 in the example above)\\
+
+All the Elmers start at the root, while Bugs can start in any node.
+Note that Elmer catches Bugs if he is on the same spot before or after the move; or if
+they cross each other on their way.
+
+\subsection{Task}
+Please write a program that gets the moves of the Bugs and the moves of all the
+Elmers and decides when he is caught or whether Bugs has escaped.
+
+\subsection{Input}
+The first line contains the number of problems. Each one of the other lines contains
+three numbers: the first is N = number of Elmers; the second is M = number of
+moves; and the third is P0 = Bugs's initial location. These numbers are followed by M
+groups of N+1 letters each which define the moves of Bugs (the first letter) and each
+one of the Elmers (the next N letters).
+
+\subsection{Output}
+The move number after which Bugs is caught, and the index of the Elmer who caught
+it (if several has, give the minimal one), or 0 0 if he survives the search.
+
+Note: There is no new line character at the end of the result.
+
+\subsection{Sample Input}
+2\\
+4 2 3 LLLRR SLRLR\\
+2 6 8 LLR ULS SRS USR USU SUU
+
+\subsection{Sample Output}
+2 3\\
+0 0

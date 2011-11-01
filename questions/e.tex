@@ -1,0 +1,237 @@
+% QUESTION E
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Question E:\\Kakuro Validation}
+
+\subsection{Description}
+Kakuro is a number puzzle also known as “cross-sum”. The Kakuro puzzle 
+is a n * n board which has 3 types of cells:
+
+\begin{enumerate}
+\item White Cells or Blank Cells in which the solver can put in any 
+number between 1 and 9.
+
+\includegraphics{src/qe0.png}
+
+represented as 0 0
+
+\item Clue cells are Grey Cells that carry sums of sequences (row or 
+column or both). They are not fillable but provide clues for filling 
+values in the row and column sequences that follow.
+
+\includegraphics{src/qe1.png}\includegraphics{src/qe2.png}
+\includegraphics{src/qe3.png} represented as -1 17, 14 -1 
+and 14, 17 respectively
+
+\item Block Cells are Grey Cells are empty and unused.
+
+\includegraphics{src/qe4.png} represented as -1 -1
+\end{enumerate}
+
+The objective of the game is to fill the white cells with 
+values that that the rules of the game are met.
+
+The rules of the game are as follows
+\begin{enumerate}
+\item A digit cannot appear more than once in a sequence (row or column). 
+Note that if the row or column has more than one sequence, the digit 
+can appear once in each sequence
+\item The sum of digits in a row sequence should match the row sum 
+in the clue cell that appears ahead of the row sequence.
+\item The sum of digits in a column sequence should match the column 
+sum in the clue cell that appears ahead of the column sequence.
+\end{enumerate}
+
+There are some rules that define if the structure of the Kakuro 
+Puzzle is valid
+
+\begin{enumerate}
+\item All row sequences of 2 to 9 white cells should be preceded (to the left) 
+by a Clue Cell that has a row sum
+\item All column sequences of 2 to 9 white cells should be preceded (above) 
+by a Clue Cell that has a column sum
+\item No clue cells should be present where there is no row sequence 
+or column sequence that follows it.
+\item Clue Cells should have only a row sum if there is a row sequence 
+that follows it but no column sequence below it. Similarly it should only 
+have a column sum if there is a column sequence that follows it but no 
+row sequence that follows it. It should have a row and column sum if it has 
+both row and column sequences that follow.
+\end{enumerate}
+
+An example of where both row and column cell are present is shown below
+
+\begin{enumerate}
+\item All row and column sums should have values between 3 and 45
+\item The White Cells should be contiguous and connected. They should 
+not be in the form of multiple unconnected islands. (see sample scenario 4)
+\item All White Cells should have both row and column sequence neighbors. 
+In other words, no row or column sequence can just have one member cell. 
+See example below.
+\end{enumerate}
+
+The following diagram depicts some scenarios where the structure is invalid
+
+\begin{enumerate}
+\item Row sum instead of column sum
+\item Missing row sum
+\item Orphan cell that has no column neighbor
+\item Row sum with so subsequent row sequence
+\end{enumerate}
+
+Additionally, there should be one and only one solution possible 
+with the given puzzle clues.
+
+\subsection{Task}
+Write a program that when given a potential Kakuro Puzzle, 
+identifies if
+
+\begin{enumerate}
+\item it is structurally correct
+\item it has a possible valid solution
+\item it has a unique solution
+\end{enumerate}
+
+\subsection{Time Limit}
+Maximum three seconds
+
+\subsection{Input}
+The first line of the input N is the puzzle board size (4 <= N <= 10)
+
+This is followed by N lines of input (for each row) each containing a 
+pair of N numbers that represent the N cells in the row.
+
+-1 -1 represents a grey or block cell
+
+0 0 represents a White or Blank cell that is fillable
+
+-1 R represents a clue cell that carries only a row sequence sum 
+(3 <= R <= 45)
+
+C -1 represents a clue cell that carries only a column sequence sum 
+(3 <= C <= 45)
+
+C R represents a clue cell that carries both row and column sums
+
+\subsection{Output}
+One of the following
+
+If there are structural issues – e.g. missing or extraneous 
+row or column sums,
+
+Invalid Puzzle Structure
+
+If it is structurally valid and has a unique solution,
+
+Valid Puzzle
+
+If it is structurally valid but has no valid solution,
+
+No Solution
+
+If it is structurally valid but has multiple valid solutions,
+
+No Unique Solution
+
+\subsection{Sample Input - Scenario 1}
+10\\
+-1 -1 14 -1 23 -1 -1 -1 6 -1 16 -1 -1 -1 -1 -1 6 -1 6 -1\\
+-1 17 0 0 0 0 -1 4 0 0 0 0 -1 -1 4 4 0 0 0 0\\
+-1 11 0 0 0 0 13 11 0 0 0 0 29 8 0 0 0 0 0 0\\
+-1 -1 -1 16 0 0 0 0 14 17 0 0 0 0 0 0 0 0 -1 -1\\
+-1 -1 -1 -1 -1 11 0 0 0 0 0 0 0 0 9 -1 -1 -1 -1 -1\\
+-1 -1 -1 -1 -1 7 0 0 0 0 13 8 0 0 0 0 -1 -1 -1 -1\\
+-1 -1 -1 -1 16 -1 17 26 0 0 0 0 0 0 0 0 20 -1 -1 -1\\
+-1 -1 4 19 0 0 0 0 0 0 0 0 11 10 0 0 0 0 5 -1\\
+-1 19 0 0 0 0 0 0 -1 10 0 0 0 0 -1 4 0 0 0 0\\
+-1 7 0 0 0 0 -1 -1 -1 4 0 0 0 0 -1 13 0 0 0 0\\
+
+\includegraphics{src/qe5.png}
+
+\subsection{Sample Output - Scenario 1}
+Valid Puzzle
+
+\subsection{Explanation - Scenario 1}
+There is only one solution as shown below:
+
+\includegraphics{src/qe6.png}
+
+Note that the numbers can appear only once is a given sequence but 
+if there are multiple sequences in each row or column, the digit 
+can appear once in each of then e.g. 1 and 3 in the second row.
+
+\subsection{Sample Input - Scenario 2}
+4
+-1 -1 13 -1 11 -1 9 -1
+-1 5 0 0 0 0 0 0
+-1 6 0 0 0 0 0 0
+-1 4 0 0 0 0 -1 -1
+
+\includegraphics{src/qe7.png}
+
+\subsection{Sample Output - Scenario 2}
+No Solution
+
+\subsection{Explanation - Scenario 2}
+On the second row, no 3 different digits can add to up to 5. 
+Hence, no solution possible.
+
+\subsection{Sample Input - Scenario 3}
+4\\
+-1 -1 13 -1 11 -1 9 -1\\
+-1 23 0 0 0 0 0 0\\
+-1 6 0 0 0 0 0 0\\
+-1 4 0 0 0 0 -1 -1\\
+
+\includegraphics{src/qe8.png}
+
+\subsection{Sample Output - Scenario 3}
+No Unique Solution
+
+\subsection{Explanation - Scenario 3}
+There are multiple solutions possible. 
+
+Two Examples are shown below:\\
+
+\includegraphics{src/qe9.png} \includegraphics{src/qe10.png}
+
+\subsection{Sample Input - Scenario 4}
+6\\
+-1 -1 17 -1 3 -1 -1 -1 -1 -1 -1 -1\\
+-1 11 0 0 0 0 -1 -1 -1 -1 -1 -1\\
+-1 9 0 0 0 0 -1 -1 -1 -1 -1 -1\\
+-1 -1 -1 -1 -1 -1 -1 -1 17 -1 3 -1\\
+-1 -1 -1 -1 -1 -1 -1 9 0 0 0 0\\
+-1 -1 -1 -1 -1 -1 -1 11 0 0 0 0\\
+
+\includegraphics{src/qe11.png}
+
+\subsection{Sample Output - Scenario 4}
+Invalid Puzzle Structure
+
+\subsection{Explanation - Scenario 4}
+The puzzle (though it has a valid solution) has 2 
+disconnected islands of White cells.
+
+\subsection{Sample Input - Scenario 5}
+4
+-1 -1 13 8 11 -1 9 -1\\
+-1 23 0 0 0 0 0 0\\
+-1 6 0 0 0 0 -1 -1\\
+-1 -1 0 0 0 0 -1 -1\\
+
+\includegraphics{src/qe12.png}
+
+\subsection{Sample Output - Scenario 5}
+Invalid Puzzle Structure
+
+\subsection{Explanation - Scenario 5}
+The structure is invalid for multiple reasons
+\begin{enumerate}
+\item The last row has no row sum.
+\item The last column has a white cell which is the only cell 
+in a column sequence – this is not allowed as all white cells 
+should have both row and column neighbors that are white cells
+\item The cell with input values 13 8 is incorrect as the row 
+sum 8 has no row sequence following it
+\end{enumerate}

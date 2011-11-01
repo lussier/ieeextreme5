@@ -1,0 +1,48 @@
+% QUESTION B
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Question B\\Implementing a letter-specific Bloom filter}
+
+\subsection{Description}
+A Bloom filter is a space-efficient data structure used for probabilistic 
+set membership testing. When testing an object for set membership, a Bloom 
+filter may give a false positive (that is, return a “true” for the tested 
+object when the object is not mapped into the filter), but never a false 
+negative (that is, return a “false” when the tested object is mapped into 
+the filter). For this problem you will implement a Bloom filter 
+specifically intended for mapping and testing of English words.
+
+\subsection{Task}
+Write a program accepts as input a series of mapping words (say, “cat”, 
+“dog”, and “bird”) to map or load the Bloom filter as described below. 
+Once the Bloom filter is mapped the program should accept words to test 
+against the mapped filter. The program should return TRUE or FALSE for 
+each entered test word as described below. All inputs are case 
+insensitive (that is, “Cat” and “cat” should be considered to be the same).
+The Bloom filter is a boolean array indexed from 1 to 26. The filter 
+array is initialized to all array values, or positions, set to FALSE. 
+Each letter of a mapping word sets the corresponding alphabetical position 
+value in the array to TRUE (if it is already TRUE from a previous mapping, 
+then it remains TRUE). For example, “Cat” would set array positions 3, 
+1, and 20 to TRUE corresponding to position 3 for “C”, 1 for “a”, and 20 
+for “t”. When testing for set membership, each position in the filter
+array must be TRUE for the positional value of each letter in the test 
+word for the program to return TRUE, else FALSE is returned.
+
+\subsection{Input}
+The first line contains a series of English words delimited by spaces, 
+line breaks, and/or punctuation “.”, “,”, “?”, and “!”.
+The second line contains the testing words.
+
+\subsection{Output}
+The program should output the number of test words (from the testing file) 
+that tested as TRUE in the Bloom filter.
+
+\subsection{Sample Input}
+cat dog bird turtle\\
+Bottle MOUSE cat doggy Dog
+
+\subsection{Sample Output}
+For the above sample input the output should be:\\
+3
+
+\pagebreak

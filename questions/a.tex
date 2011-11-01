@@ -1,0 +1,47 @@
+% QUESTION A
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Question A\\Computing Pearson’s correlation coefficient} 
+
+\subsection{Description}
+Pearson’s correlation coefficient is a statistical measure of correlation
+between two data sets or series. The value of the coefficient ranges from
++1 (perfect positive correlation) to -1 (perfect negative correlation). 
+Correlations can indicate a predictive relationship that can be useful in 
+practical applications. The formula for Pearson’s correlation coefficient 
+for two series X and Y is:
+
+$ \rho_{X,Y}={\mathrm{cov}(X,Y) \over \sigma_X \sigma_Y} ={E[(X-\mu_X)(Y-\mu_Y)] \over \sigma_X\sigma_Y} $
+
+where $ \mu_x $ is the population mean of series X (and $ \mu_x $ is the 
+same for series Y), $ \mu_x $ is the population standard deviation of series 
+X (and $ \mu_x $ the same for series Y), and $ E [] $ is expected value.
+
+\subsection{Task}
+Write a program that accepts as input two series of values, X and Y, and 
+computes the Pearson correlation coefficient (). You may assume that each 
+series has the same number of values.
+
+\subsection{Input}
+Series of values X and Y seperated by space.
+
+\subsection{Output}
+The program should output the value of $ \rho_{x,y} $ to four decimal 
+places. If $ \rho_{x,y} $ cannot be computed, then the output should be 
+the string 'invalid input'. 
+Note: The input ends with a delimiter. There is no new line character 
+at the end of the result.
+
+\subsection{Sample Input}
+14 2\\
+16 5\\
+27 7\\
+42 9\\
+39 10\\
+50 13\\
+83 20\\
+-\\
+
+\subsection{Sample Output}
+The following is the output for the above sample input.\\
+0.9856
+

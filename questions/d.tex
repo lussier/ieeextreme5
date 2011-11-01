@@ -1,0 +1,122 @@
+% QUESTION D
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Question D:\\Passing the Number Ball}
+
+\subsection{Description}
+The mathematics teacher in a large high school was asked to conduct 
+some outdoor games and activities for the entire school and also divide 
+the students into 4 different houses. He decided to check their basic 
+math skills as well. There was a basket at the center of the playground 
+and the place around the basket is divided into 14641 (121 * 121) 
+“five feet squares” numbered like a typical X-Y coordinate system. 
+He asked all students to distribute themselves equally around the basket 
+with 5 feet distance between each other as shown in the yellow cells 
+in the figure below. He demonstrated that with 53 students from one class. 
+He later planned to do this for the entire school so that he can 
+randomly create 4 house teams.
+
+\includegraphics[width=13cm]{src/table_qd.png}
+
+If there are additional students who cannot equally distribute themselves 
+around the basket, they would first fill the Eastern edge starting 
+from South (as shown in the white cells in the diagram above), and then 
+fill the Northern edge starting from East, and then the Western Edge 
+starting from North, and finally the Southern edge starting from West.
+
+The students were then asked to list the prime numbers in ascending order 
+in the form a spiral, starting with 7 as the number used by the student 
+immediately to the East of the basket (refer figure below)
+
+\includegraphics[width=13cm]{src/table_qd2.png}
+
+There were four large similar looking balls given to the students who 
+were assigned the largest prime numbers ending in 1, 3,7 and 9 respectively 
+(in this case 251, 263, 257 and 239). They had to write their number on 
+the ball and then throw it to the next student with the same ending digit 
+(in this case 241, 233, 227 and 229) so that they can do the same. This 
+process had to repeat till the last student in their team (11, 13, 7, 19)
+ who will finally throw the ball into the basket (numbered 5). The team 
+ should know who to throw to and who to catch from and any wrong or missed 
+ catches meant a penalty. The winning team is the one that has the least 
+ penalty and throws the ball into basket in the shortest time.
+
+The sequence of throws for the team with numbers ending in 3 is depicted 
+on the figure above.
+
+\subsection{Task}
+One of the sharp students decided to write a small program to help their
+team. Given their coordinates, it will output the prime number that he 
+should write on the ball, the coordinate of the student from who he has 
+to catch the ball and the coordinate of the student to whom he had to 
+throw the ball.
+
+You task is to help the student write the program.
+
+\subsection{Time Limit}
+One second for a maximum of 10000 students and 100 inputs
+
+\subsection{Input}
+N – number of students in the high school followed by a list of 
+coordinates ‘xi yi’ of students who want to find out who they have 
+to catch from and who they have to throw to. (0 < i < 100)
+
+The end of the list is marked by ‘-999 -999’.
+
+\subsection{Output}
+For each input coordinate, the coordinates of the thrower and the 
+catcher in the form
+
+I should write
+
+I should catch from
+
+I should throw to
+
+Where P(x,y) is the prime number to be written by the student
+
+m, n is the coordinates of the student from whom the catch should 
+be taken (if the input is of the first thrower – this should be 
+recorded as ‘nobody’ – see example below)
+
+p, q is the coordinates of the student / basket to whom the ball 
+should be thrown
+
+if the input location has no student - the the output should just 
+have 'No student at this location' for that line 
+
+Note: Each line should end with a new line character.
+
+\subsection{Sample Input}
+53
+
+4 7
+
+4 -3
+
+-1 -1
+
+1 1
+
+-3 -1
+
+0 0
+
+-999 -999
+
+\subsection{Sample Output}
+No student at this location\\
+I should write 239\\
+I should catch from nobody\\
+I should throw to 2 -3\\
+I should write 23\\
+I should catch from 2 1\\
+I should throw to 0 1\\
+I should write 11\\
+I should catch from 1 -1\\
+I should throw to 0 0\\
+I should write 191\\
+I should catch from -1 -3\\
+I should throw to -3 0\\
+No student at this location
+

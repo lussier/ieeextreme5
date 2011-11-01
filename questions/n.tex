@@ -1,0 +1,73 @@
+% QUESTION N
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Question N:\\Islands}
+
+\subsection{Description}
+Vangelis the bear is the proud owner of a swamp that is composed by several 
+small islands. He really likes his swamp but he hates swimming. In order 
+to allow himself to enjoy his islands, he decided to build connection paths 
+that connect those islands together.
+
+Vangelis has at his disposal a map of the swamp. This map is a square grid 
+with dimensions NxN (where N is greater than 1 \& less than or equal to 1000) 
+and is composed by squares that are either black or white. A black color 
+square represents a piece of land and a white one an area of water. 
+Two black squares are said to be connected if they are directly adjacent 
+in the horizontal or vertical direction (not in the diagonal direction). 
+We define an island as a set of one or more black squares such that each 
+black square in the island is connected to at least one other black 
+square in the island.
+
+\subsection{Task}
+Your task is to determine how many white squares need to be converted to 
+black squares so that there will be only one island in the diagram with 
+the least amount of conversions. Most test cases will have more than 
+one solution.
+
+\subsection{Input}
+Your program should read the standard input. The first line of the input 
+contains the integer N. Each of the following N lines contains N numbers 
+on each line. The numbers on each line are either a 0 or a 1, separated 
+by a single space. A 1 represents a black square, and a 0 represents 
+a white square.
+
+\subsection{Output}
+Your program should write on the standard output a number M, the number 
+of white squares to be converted to black.Note: There is no new line 
+character at the end of the result.
+
+\subsection{Input 1}
+10\\
+0 0 0 0 0 0 0 0 0 0\\
+0 0 0 0 0 0 0 0 0 0\\
+0 0 0 0 0 0 0 0 0 0\\
+0 0 0 0 0 0 0 0 0 0\\
+1 0 0 0 0 0 0 0 0 1\\
+0 0 0 0 0 0 0 0 0 0\\
+0 0 0 0 0 0 0 0 0 0\\
+0 0 0 0 0 0 0 0 0 0\\
+0 0 0 0 1 0 0 0 0 0\\
+0 0 0 0 0 0 0 0 0 0
+
+\subsection{Output 1}
+11\\
+ 
+\subsection{Input 2}
+2\\
+1 0\\
+0 1\\
+
+\subsection{Output 2}
+1\\
+ 
+\subsection{Input 3}
+4\\
+1 0 0 0\\
+0 0 0 0\\
+0 0 0 0\\
+0 0 0 1\\
+
+\subsection{Output 3}
+5
+

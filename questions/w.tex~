@@ -1,0 +1,74 @@
+% QUESTION W
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Question W:\\Maya Diet}
+
+\subsection{Description}
+Maya wants to switch to a healthy diet. An optimal diet consists 
+of C gm of carbohydrates, F gm of fat, P gm of protein. Any other
+ element in the food (represented by O) is considered unwanted. 
+ She procured a table containing the carbohydrates, fat, protein 
+ and other contents (all in gms per serving) of some healthy foods. 
+ Her goal is to consume at least C, F and P gms of carbohydrates, 
+ fat and protein respectively yet minimize the overall in-take 
+ (in gms) of food. You need to help her choose the ideal 
+ combination from the table.
+
+\subsection{Inputs}
+The program must read input from standard-input. The input format 
+is as follows. The first line contains the optimal carbohydrate, 
+fat and protein consumption (in gm), separated by spaces. 
+The second line contains k – the number of food items.
+Each of the following k lines contains - name, carbohydrate, fat, 
+protein and other contents of a food item, separated by spaces. 
+The weight of a serving of a particular food item is the sum of 
+C, P, F, O values on the corresponding line.
+The name of food items are non-space ASCII strings. 
+The maximum value for K is 10. The maximum weight of a serving is 1000 gms. 
+Each of the c, p, f, o values are whole numbers (integers >= 0).
+
+C F P\\
+k\\
+N1 c1 f1 p1 o1\\
+N2 c2 f2 p2 o2\\
+N3\\
+.\\
+.\\
+.\\
+Nk
+
+\subsection{Output}
+Output is printed onto the standard-output.
+The output must contain k lines, each line containing the name 
+of a food item followed by the number
+of servings Maya should consume, separated by space and in 
+the same sequence. If no solution exists for the problem, the
+output must be just one word - "Null".
+
+Note: There is no new line character at the end of the result.
+
+\subsection{Example Input 1}
+3 5 4\\
+3\\
+A 1 0 0 2\\
+B 0 1 0 3\\
+C 0 0 1 2
+
+\subsection{Example Output 1}
+A 3\\
+B 5\\
+C 4
+
+\subsection{Example Input 2}
+15 25 20\\
+3\\
+Banana 4 1 3 2\\
+Orange 1 2 1 3\\
+Apple 1 2 1 4
+
+\subsection{Example Output 2}
+Banana 3\\
+Orange 11\\
+Apple 0
+
+\pagebreak

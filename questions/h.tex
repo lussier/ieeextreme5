@@ -1,0 +1,48 @@
+% QUESTION H
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Question H:\\Tracking billiard balls}
+
+\subsection{Description}
+A set of N billiard balls are set on a one-dimensional table. The table is 1 meter long,
+set north-south with two pockets at either side. Each ball has zero width and there is
+no friction so it is moving with a fixed velocity of either northward or southward and
+bounces back in a perfect elastic collision from other balls it encounter on its way (or
+drop into one of the pockets).
+Your job is to keep track of the balls movements.
+
+\subsection{Task}
+Please write a program that gets the initial place, speed and direction of all
+the balls and gives the position of a specific ball after t seconds.
+
+\includegraphics{src/qH0.png}
+
+\subsection{Input}
+
+The first line contains the number of scenarios.
+Each one of the other lines in the input contains a scenario:
+The first number, N, is the number of balls; followed by N pairs of numbers: the
+distance in centimeters from the south end of the table and the speed (positive speed
+meaning it moves northward); the last two numbers are the number i of the target ball
+you should track and the time T in seconds.
+
+\subsection{Output}
+
+The output is a single number for each line which is the place (distance in centimeters
+from the south end of the table) of the tracked ball after T seconds.
+Note: There is no new line character at the end of the result.
+
+\subsection{Sample Input}
+5\\
+1 50 1 1 1000\\
+1 50 1 1 6\\
+1 60 -2 1 6\\
+2 10 1 95 -1 2 30\\
+2 10 1 95 -1 2 60\\
+\subsection{Sample Output}
+100\\
+56\\
+48\\
+65\\
+70
+

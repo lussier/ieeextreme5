@@ -1,0 +1,50 @@
+% QUESTION V
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Question V:\\Hogwart's Cup}
+
+\subsection{Description}
+It’s almost the end of the year; Dumbledore wants to give out 
+the Hogwarts House cup to the group that has the most points. 
+However recent events need to be considered and he has some 
+last minute points to be awarded. Dumbledore could wave his wand 
+to find the winner, but a critical bug in the wand's code 
+made it to stop working. You need to help him, calculate the 
+revised scores of each of the group and announce the highest score. 
+Dumbledore is counting on you.
+
+\subsection{Input Format}
+First line is the number of Test Cases, N.
+
+Next line contains Number of students X (X <= 100000), 
+Number of Revision operations R, Number of Group values to 
+calculate G.(\#R + \#G <= 100000)
+
+Next line will be the initial scores for each of the students. 
+Space separated s1..sX. Each student can be awarded a 
+maximum score of 100.
+
+Next line will continue with operations for score revision. 
+Line starts with R, next value is the index of student to 
+revise, and next value is the extra points awarded.
+
+Further down will be the operations for calculating 
+group totals. Group start student index, and end student 
+index. (Both students inclusive)
+
+\subsection{Output Format}
+Highest score of the entire group score calculations
+
+Note: There is no new line character at the end of the result.
+
+\subsection{Test Input}
+1\\
+10 2 2\\
+1 1 1 1 1 1 1 1 1 1\\
+R 2 2\\
+R 8 3\\
+G 1 6\\
+G 5 10\\
+
+\subsection{Test Output}
+9

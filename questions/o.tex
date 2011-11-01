@@ -1,0 +1,62 @@
+% QUESTION O
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Question O:\\Patron}
+
+\subsection{Description}
+Vangelis the bear wants to understand more about music; and giving a 
+scientific look into songs, he realized that most songs have patterns 
+(a.k.a motives) in them. After making this discovery, Vangelis decided 
+to study these reappearing sequences of notes by using his computer and 
+to do so he simplified the songs by converting them into 8bit integer 
+values that describe only the pitch of a note. Thus, a song can be a 
+sequence of the form 2,5,12,145,233,…
+
+\subsection{Task}
+Your task is, given one song encoded as above, to identify all the 
+patterns that appear at least L times and have size of at least D 
+notes and report back the sum of appearances of the patterns found. 
+A pattern of size X may contain another pattern of size Y (X>Y). 
+Patterns may overlap.
+
+\subsection{Input}
+Your program should read the standard input.
+The first line of the input contains an integer D representing the 
+minimum allowed number of the notes within a pattern (where 1 ≤ D ≤ 500 ).
+The second line contains an integer L representing the minimum 
+allowed number of appearances of the pattern within the song 
+(where 2 ≤ L ≤ 500 ).
+The third line contains an integer F representing the number of 
+notes within the song ( where 2 ≤ F ≤ 10000 ).
+Each of the next F lines contains a single integer in the 
+range [0,255], which depicts the discrete note pitch.
+
+\subsection{Output}
+Your program should write on the standard output 1 line. The line 
+should contain a single integer, in range [2,4875250], denoting 
+the sum of appearances of the patterns that appear at least L 
+times and contain at least D notes.
+
+Note: There is no new line character at the end of the result.
+
+\subsection{Input}
+2\\
+2\\
+6\\
+1\\
+2\\
+1\\
+2\\
+1\\
+2
+
+\subsection{Output}
+11
+
+\subsection{Explanation}
+(Pattern) - Occurrences\\
+(1 2) - 3\\
+(2 1) - 2\\
+(1 2 1) - 2\\
+(2 1 2) - 2\\
+(1 2 1 2) - 2
